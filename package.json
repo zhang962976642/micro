@@ -1,0 +1,30 @@
+{
+  "name": "micro",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhang962976642/micro.git"
+  },
+  "keywords": [
+    "micro",
+    "express_micro"
+  ],
+  "author": "zhang962976642",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhang962976642/micro/issues"
+  },
+  "homepage": "https://github.com/zhang962976642/micro#readme",
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
