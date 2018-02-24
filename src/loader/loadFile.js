@@ -1,5 +1,5 @@
 /**
- * @description 同步加载文件信息，为router、controller、services提供自动加载服务
+ * @description 同步加载文件信息，方便为业务提供自动加载功能
  * @createTime 2018/02/23
  * @author zhang962976642
  * @method readLoaderFiles
