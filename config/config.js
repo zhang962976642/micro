@@ -4,9 +4,10 @@
 */
 
 const config = {
-  port: 3003
+  port: 3003,
+  defaultRouterPath: "../../routes",
+  defaultControllerPath: "../../controllers",
+  defaultServicesPath: "../../services"
 };
 
-module.exports = {
-  config
-};
+module.exports = config;

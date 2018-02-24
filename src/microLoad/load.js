@@ -15,23 +15,28 @@
 */
 
 const path = require("path"),
+  config = require("../../config/config"),
   readLoaderFiles = require("./loadFile");
 
 class MicroLoad {
   load(dir){
     let fileDir = dir ? path.resolve(__dirname, dir) : null,
       { error, readFileArrs } = readLoaderFiles(fileDir);
-    return { error, readFileArrs };
+    if(error){
+      // 这里可写入日志
+      console.log(error);
+    };
+    return readFileArrs;
   }
-  loadRoutes(dir){
-    return this.load(dir);
+  loadRoutes(){
+    return this.load(config.defaultRouterPath || null);
   }
-  loadControllers(dir){
-    return this.load(dir);
+  loadControllers(){
+    return this.load(config.defaultControllerPath || path);
   }
-  loadServices(dir){
-    return this.load(dir);
+  loadServices(){
+    return this.load(config.defaultServicesPath || null);
   }
 };
-console.log(new MicroLoad().loadRoutes("../../routes"));
+
 module.exports = MicroLoad;

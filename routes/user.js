@@ -5,10 +5,8 @@
  * 
 */
 
-module.exports = [
-  {
-    method: "get",
-    path: "/api/v1/users",
-    controller: "users"
+module.exports = () => {
+  return {
+    "get /": "123" 
   }
-]
+}
