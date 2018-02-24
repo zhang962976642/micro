@@ -12,9 +12,9 @@ class User extends Controller {
   constructor(props){
     super(props);
   }
-  gets(){
-    console.log(">>>");
-    console.log("gets!");
+  gets(ctx) {
+    let { req, res, next, services } = ctx;
+    services.user.getUser();
   }
 };
 
