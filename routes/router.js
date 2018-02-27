@@ -9,7 +9,8 @@
 
 module.exports = (app) => {
   let controllers = app.controllers || null;
+
   return {
-    "GET /": new controllers.user().gets
+    "GET /": controllers.user.userHome
   }
 }
