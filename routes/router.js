@@ -11,6 +11,7 @@ module.exports = (app) => {
   let controllers = app.controllers || null;
 
   return {
-    "GET /": controllers.user.userHome
+    "GET /": controllers.user.userHome,
+    "POST /": controllers.user.createHome
   }
 }

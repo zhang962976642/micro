@@ -4,11 +4,12 @@
  * @author zhang962976642 
 */
 
-const Micro = require("./lib/core");
+const microCore = require("./lib/core");
 
-let app = new Micro(),
-  expressApp = app.app || null;
+global.Micro = new microCore();
+ 
+let app = Micro.app || null;
 
-app.initRouter();
-
-expressApp && expressApp.listen("3000", () => { console.log("success") })
+// initRouter
+Micro.initRouter();
+app && app.listen("3000", () => { console.log("success") });
